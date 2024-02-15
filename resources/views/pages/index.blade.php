@@ -6,6 +6,13 @@
     
     <h1>Il nostro catalogo fumetti: {{ count($comics) }}</h1>
     <div class="container">
+        <br>
+        
+        <button>
+            <a href="{{ route('comics.create') }}">Aggiungi un fumetto</a>
+        </button>
+        <br>
+
         <table class="table">
             <thead>
                 <tr>

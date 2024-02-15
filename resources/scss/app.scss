@@ -11,3 +11,47 @@
     margin: 0 auto;
     padding: 5rem;
 }
+
+button {
+    width: 13rem;
+    padding: 0.7rem 0;
+    background-color: orange;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bolder;
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+a {
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(100, 83, 28);
+}
+
+form {
+    text-align: center;
+
+    label {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0.5rem 0;
+        display: block;
+    }
+    input {
+        border: 0;
+        font-size: 16px;
+        border-bottom: 1px solid darkgray;
+    }
+    #submit {
+        margin: 2rem;
+        width: 5rem;
+        padding: 0.5rem;
+        background-color: orange;
+        font-weight: 500;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+}
