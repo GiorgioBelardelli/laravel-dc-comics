@@ -24,7 +24,7 @@
             <label for="Price">Prezzo di vendita:</label>
             <input type="text" name="Price" id="Price">
             <br>
-            <input type="submit" value="Inserisci" id="submit">
+            <input type="submit" value="Inserisci" class="submit">
         </form>
     </div>
 @endsection

@@ -44,14 +44,27 @@ form {
         border: 0;
         font-size: 16px;
         border-bottom: 1px solid darkgray;
+        width: 20rem;
+        text-align: center;
     }
-    #submit {
+    .submit {
         margin: 2rem;
-        width: 5rem;
+        width: 5.5rem;
         padding: 0.5rem;
         background-color: orange;
         font-weight: 500;
         border: 1px solid black;
         border-radius: 10px;
     }
+    .blue-sub {
+        background-color: rgb(58, 58, 204);
+        color: whitesmoke;
+    }
+}
+#delete-button {
+    display: inline;
+    width: 2rem;
+    padding: 0.1rem;
+    background-color: rgb(241, 241, 241);
+    border: 1px solid black;
 }

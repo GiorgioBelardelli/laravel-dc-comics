@@ -31,6 +31,26 @@
                     </td>
                     <td>{{ $comic -> Author }}</td>
                     <td>{{ $comic -> Price }}</td>
+                    <td>
+                        <form
+                        class="d-inline" 
+                        action="{{ route('comics.destroy', $comic -> id) }}"
+                        method="POST"
+                        >
+                        @csrf
+                        @method('DELETE')
+                                <button id="delete-button">
+                                    X
+                                </button>
+
+                        </form>
+                        <a 
+                        href="{{ route('comics.edit', $comic -> id) }}"
+                        >
+                        MODIFICA
+                        </a>
+                    </td>
+
                 </tr>
             @endforeach
             </tbody>
