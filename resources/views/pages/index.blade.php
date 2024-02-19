@@ -39,7 +39,9 @@
                         >
                         @csrf
                         @method('DELETE')
-                                <button id="delete-button">
+                                <button 
+                                onclick="return(confirm('Confermi?'))"
+                                id="delete-button">
                                     X
                                 </button>
 
