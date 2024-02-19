@@ -40,7 +40,7 @@
                         @csrf
                         @method('DELETE')
                                 <button 
-                                onclick="return(confirm('Confermi?'))"
+                                onsubmit="return(confirm('Confermi?'))"
                                 id="delete-button">
                                     X
                                 </button>

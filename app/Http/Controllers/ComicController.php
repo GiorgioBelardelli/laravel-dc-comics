@@ -40,7 +40,29 @@ class ComicController extends Controller
     {
         // dd($request ->all());
 
-        $data = $request -> all();
+        // $data = $request -> all();
+
+        $data = $request -> validate([
+            
+            'Title' => 'required|string|min:3|max:255', 
+            'Volume_number' => 'required|numeric|min:1|max:99',
+            'Author' => 'required|string|min:3|max:255',
+            'Price' => 'required|decimal:2',           
+         
+        ], [
+            'Title' => "E' richiesto un titolo",
+            'Title.min' => "Il Titolo non puó contenere meno di 3 caratteri",
+            'Title.max' => "Il Titolo non puó contenere piú di 255 caratteri",
+            'Volume_number' => "E' richiesto il numero del Volume",
+            'Volume_number.min' => "Il numero del Volume non puó essere minore di 1",
+            'Volume_number.max' => "Il numero del Volume non puó essere maggiore di 100",
+            'Author' => "E' richiesto il nome dell'autore",
+            'Author.min' => "Il nome dell'autore non puó contenere meno di 3 caratteri",
+            'Author.min' => "Il nome dell'autore non puó contenere piú di 255 caratteri",
+            'Price' => "Devi inserire il prezzo",
+            'Price.decimal' => "Il prezzo deve avere anche i due decimali",
+
+        ]);
 
         $newComic = new Comic();
 
@@ -91,8 +113,31 @@ class ComicController extends Controller
     {
         $comic = Comic::find($id);
         
-        $data = $request -> all();
+        //$data = $request -> all();
         
+        $data = $request -> validate([
+            
+            'Title' => 'required|string|min:3|max:255', 
+            'Volume_number' => 'required|numeric|min:1|max:99',
+            'Author' => 'required|string|min:3|max:255',
+            'Price' => 'required|decimal:2',           
+         
+        ], [
+            
+            'Title' => "E' richiesto un titolo",
+            'Title.min' => "Il Titolo non puó contenere meno di 3 caratteri",
+            'Title.max' => "Il Titolo non puó contenere piú di 255 caratteri",
+            'Volume_number' => "E' richiesto il numero del Volume",
+            'Volume_number.min' => "Il numero del Volume non puó essere minore di 1",
+            'Volume_number.max' => "Il numero del Volume non puó essere maggiore di 100",
+            'Author' => "E' richiesto il nome dell'autore",
+            'Author.min' => "Il nome dell'autore non puó contenere meno di 3 caratteri",
+            'Author.min' => "Il nome dell'autore non puó contenere piú di 255 caratteri",
+            'Price' => "Devi inserire il prezzo",
+            'Price.decimal' => "Il prezzo deve avere anche i due decimali",
+
+        ]);
+
         $comic -> Title = $data['Title'];
         $comic -> Volume_number = $data['Volume_number'];
         $comic -> Author = $data['Author'];
